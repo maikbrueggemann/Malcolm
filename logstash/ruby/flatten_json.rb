@@ -1,5 +1,4 @@
 def register(params)
-  # Speichere die übergebenen Parameter-Strings
   @src_field = params["source_field"]
   @dst_field = params["target_field"]
 end
@@ -14,7 +13,7 @@ def filter(event)
       end
     when Array
       node.each_with_index do |v, i|
-        path = "#{path_prefix}[#{i}]"
+        path = "#{path_prefix}.#{i}"
         flatten_tree(v, path, result)
       end
     else
