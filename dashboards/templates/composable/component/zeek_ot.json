@@ -6191,14 +6191,13 @@
                 "value": {
                   "type": "keyword"
                 },
-                "value_parsed": {
-                  "type": "object",
-                  "enabled": true
-                },
                 "success": {
                   "type": "keyword"
                 },
                 "diag": {
+                  "type": "keyword"
+                },
+                "value_parsed": {
                   "type": "keyword"
                 }
               }
@@ -6211,15 +6210,18 @@
                 "attributes": {
                   "type": "keyword"
                 },
-                "attributes_parsed": {
-                  "type": "object",
-                  "enabled": true
-                },
                 "success": {
                   "type": "keyword"
                 },
                 "diag": {
                   "type": "keyword"
+                },
+                "attributes_parsed": {
+                  "type": "nested",
+                  "properties": {
+                    "path": { "type": "keyword" },
+                    "value": { "type": "keyword" }
+                  }
                 }
               }
             },
@@ -6234,15 +6236,18 @@
                 "value": {
                   "type": "keyword"
                 },
-                "value_parsed": {
-                  "type": "object",
-                  "enabled": true
-                },
                 "success": {
                   "type": "keyword"
                 },
                 "diag": {
                   "type": "keyword"
+                },
+                "value_parsed": {
+                  "type": "nested",
+                  "properties": {
+                    "path": { "type": "keyword" },
+                    "value": { "type": "keyword" }
+                  }
                 }
               }
             },
@@ -6260,15 +6265,18 @@
                 "value": {
                   "type": "keyword"
                 },
-                "value_parsed": {
-                  "type": "object",
-                  "enabled": true
-                },
                 "success": {
                   "type": "keyword"
                 },
                 "diag": {
                   "type": "keyword"
+                },
+                "value_parsed": {
+                  "type": "nested",
+                  "properties": {
+                    "path": { "type": "keyword" },
+                    "value": { "type": "keyword" }
+                  }
                 }
               }
             },
@@ -6280,14 +6288,13 @@
                 "attributes": {
                   "type": "keyword"
                 },
-                "attributes_parsed": {
-                  "type": "object",
-                  "enabled": true
-                },
                 "success": {
                   "type": "keyword"
                 },
                 "diag": {
+                  "type": "keyword"
+                },
+                "attributes_parsed": {
                   "type": "keyword"
                 }
               }
